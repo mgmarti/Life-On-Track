@@ -1,8 +1,10 @@
 const express = require ("express");
+const connectDB =require("./config/db");
 //const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-
+//Connect Database way of MongoDB Atlas
+connectDB();
 //static assets for heroku
 //if (process.env.NODE_ENV === "production") {
     //app.use(express.static("client/build"));
