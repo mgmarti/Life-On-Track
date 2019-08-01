@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 //Connect Database way of MongoDB Atlas
 connectDB();
+
+//Init Middleware
+app.use(express.json({extended:false}));
 //static assets for heroku
 //if (process.env.NODE_ENV === "production") {
     //app.use(express.static("client/build"));
