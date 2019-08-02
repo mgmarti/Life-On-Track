@@ -1,6 +1,6 @@
 const express = require ("express");
 const connectDB =require("./config/db");
-//const path = require("path");
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 //Connect Database way of MongoDB Atlas
@@ -22,7 +22,11 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/goals", require("./routes/goals"));
 
 
-app.get("/", (req,res)=> res.send("mic check 1-2"));
+//app.get("/", (req,res)=> res.send("mic check 1-2"));
+
+app.get ("*", (req,res) => {
+    res.sendFile(path.join(_dirname, "./client/build/index.html"));
+});
 
 
 
