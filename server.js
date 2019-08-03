@@ -16,11 +16,15 @@ app.get('/', (req, res) => res.send('Hello world!'));
 //     extended: false
 // }));
 
+<<<<<<< HEAD
 // Define Routes
 // app.use('/api/users', require('./routes/api/users'));
 // app.use('/api/auth', require('./routes/api/auth'));
 // app.use('/api/profile', require('./routes/api/profile'));
 // app.use('/api/posts', require('./routes/api/posts'));
+=======
+app.get("/", (req,res)=> res.render('../client/pages/About.js'));
+>>>>>>> aaaa79330f094a6d849885f0c979d150228fbe91
 
 // Serve static assets in production
 // if (process.env.NODE_ENV === 'production') {
