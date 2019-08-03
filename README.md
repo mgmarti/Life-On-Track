@@ -1,4 +1,4 @@
-# Project 3
+# Project 3 
 
 > Fill this quoted section with a summary of your project. 3-5 sentences describing the problem and how your application solves it. (Even a game is solving a problem to a degree) - What makes your app stand out from other apps like it (Do some competitor research)
 

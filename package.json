@@ -3,13 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "concurrently": "^4.1.1",
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "if-env": "^1.0.4",
     "lodash": "^4.17.14",
+    "mongoose": "^5.6.7",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js react-scripts start",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=FASLE npm install --prefix client && npm run build --prefix client",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -28,5 +42,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "> Fill this quoted section with a summary of your project. 3-5 sentences describing the problem and how your application solves it. (Even a game is solving a problem to a degree) - What makes your app stand out from other apps like it (Do some competitor research)",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgmarti/project-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgmarti/project-3/issues"
+  },
+  "homepage": "https://github.com/mgmarti/project-3#readme"
 }
