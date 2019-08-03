@@ -1,0 +1,43 @@
+#navigation {
+    background-color: #fff;
+}
+.navbar-brand {
+    margin-left: 150px;
+}
+
+#navbar-right{
+    margin-right: 150px;
+}
+
+#menu-toggler {
+ color: #002456;
+}
+
+#login-button{
+    background-color:#ffe546;
+    padding: 20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    text-align: center;
+    width: 120px;
+    color: #002456;
+}
+
+.btn {
+    background-color: #ffe546;
+    width: 120px;
+    border-radius: 10px;
+}
+
+a {
+    color: #002456;
+}
+
+a:hover {
+    color: #002456;
+    text-decoration: none;
+}
+
+a:active:visited {
+    color: #002456;
+}
