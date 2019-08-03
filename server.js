@@ -8,14 +8,7 @@ connectDB();
 
 //Init Middleware
 app.use(express.json({extended:false}));
-//static assets for heroku
-//if (process.env.NODE_ENV === "production") {
-    //app.use(express.static("client/build"));
-//}
 
-//app.get("*", (req,res) =>{
-    //res.sendFile(path.join(__diname,"./client/build/index.html"));
-//});
 //Routes Directory
 app.use("/api/users", require("./routes/users"));
 app.use("/api/auth", require("./routes/auth"));
@@ -24,8 +17,16 @@ app.use("/api/goals", require("./routes/goals"));
 
 //app.get("/", (req,res)=> res.send("mic check 1-2"));
 
-app.get ("*", (req,res) => {
-    res.sendFile(path.join(_dirname, "./client/build/index.html"));
+
+
+
+//static assets for heroku
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
+app.get("*", (req,res) =>{
+    res.sendFile(path.join(__diname,"./client/build/index.html"));
 });
 
 
