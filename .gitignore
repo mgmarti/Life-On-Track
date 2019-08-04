@@ -24,3 +24,5 @@ yarn-error.log*
 
 # ignore 
 **/yarn.lock
+
+.config/default.json
