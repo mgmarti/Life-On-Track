@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../Navbar/Navbar.css';
 import Jumbotron from '../Jumbotron/Jumbotron';
@@ -15,7 +16,12 @@ class Navbar extends Component {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto" id="navbar-right">
-                            <button className="btn">LOGIN</button>
+                            <Link to="/register">
+                                <button className="btn">REGISTER</button>
+                            </Link>
+                            <Link to="/login">
+                                <button className="btn">LOGIN</button>
+                            </Link>
                         </ul>
                     </div>
                 </nav>
