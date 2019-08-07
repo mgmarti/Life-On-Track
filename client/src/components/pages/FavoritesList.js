@@ -24,6 +24,7 @@ const FavoritesList = () => {
     getFavorites();
   }, []);
 
+
   return (
     <div className="container mb-5 mt-5">
       <h1 className="text-center">Here's All of Your Favorite Goals</h1>
