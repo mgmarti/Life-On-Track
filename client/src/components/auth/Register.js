@@ -20,7 +20,7 @@ const Register = () => {
         } else {
             console.log(formData);
         }
-    }
+
     return (
         <div>
             <div className="container">
