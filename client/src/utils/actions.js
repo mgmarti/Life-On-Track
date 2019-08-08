@@ -1,0 +1,9 @@
+export const UPDATE_GOALS = "UPDATE_GOALS";
+export const REMOVE_GOAL = "REMOVE_GOAL";
+export const SET_CURRENT_GOAL = "SET_CURRENT_GOAL";
+export const ADD_GOAL = "ADD_GOAL";
+export const LOADING = "LOADING";
+
+export const ADD_FAVORITE = "ADD_FAVORITE";
+export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
+export const UPDATE_FAVORITES = "UPDATE_FAVORITES";

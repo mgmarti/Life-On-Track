@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Register.css';
 
@@ -25,7 +26,7 @@ const Register = () => {
         <div>
             <div className="container">
                 <h1 className="large text-primary">
-                    <FontAwesomeIcon icon='user' size="xl" className="icons" /> Sign Up
+                    <FontAwesomeIcon icon='user' size="1x" className="icons" /> Sign Up
                     </h1>
 
                 <form className="form" onSubmit={e => onSubmit(e)}>
@@ -72,7 +73,7 @@ const Register = () => {
                     <input type="submit" className="btn btn-primary" value="Register" />
                 </form>
                 <p className="my-1">
-                    Already have an account? <a href="login.html">Sign In</a>
+                    Already have an account? <Link to='/login'>Sign In</Link>
                 </p>
             </div>
         </div>
@@ -80,4 +81,4 @@ const Register = () => {
 
 }
 
-export default Register;
+export default Register; 
