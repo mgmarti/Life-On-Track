@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
+const mongoose = require("mongoose");
 
 //Initialize express
 const app = express();
@@ -9,11 +10,19 @@ const app = express();
 // Connect Database
 connectDB();
 
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 
 // Init Middleware
-app.use(express.json({
-    extended: false
-}));
+//app.use(express.json({
+  //  extended: false
+//}));
 
 //Test Route
 // app.get('/', (req, res) => res.send('Hello world!'));
@@ -39,5 +48,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 3001;
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

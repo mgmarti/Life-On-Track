@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <StoreProvider> */}
+        <StoreProvider>
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/goals/:id" component={Detail} />
           <Route exact path="/favorites" component={FavoritesList} />
           {/* <Route component={NoMatch} /> */}
-        {/* </StoreProvider> */}
+        </StoreProvider>
 
       </Router>
     </div>

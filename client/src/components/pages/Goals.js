@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Row, Container } from "../Grid/index";
-import CreateGoalForm from "../CreateGoalForm/index";
-import GoalsList from "../GoalsList/index";
+import { Col, Row, Container } from "../Grid";
+import CreateGoalForm from "../CreateGoalForm";
+import GoalsList from "../GoalsList";
 
 const Goals = () => {
   return (
