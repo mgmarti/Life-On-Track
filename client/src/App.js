@@ -8,7 +8,7 @@ import FavoritesList from './components/pages/FavoritesList';
 import { StoreProvider } from './utils/GlobalState';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Navbar from './components/Navbar/Navbar';
+import Dashboard from './components/Dashboard/Dashboard';
 import Goals from './components/pages/Goals';
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
+          <Route exact path='/dashboard' component={Dashboard} />
           <Route exact path='/goals' component={Goals} />
           <Route exact path="/goals/:id" component={Detail} />
           <Route exact path="/favorites" component={FavoritesList} />
