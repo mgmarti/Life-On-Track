@@ -49,6 +49,12 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 3001;
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/reactcms";
+
+mongoose.connect(MONGODB_URI);
+
+
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
