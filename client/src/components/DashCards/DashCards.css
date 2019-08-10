@@ -20,6 +20,7 @@ margin-top: -90px;
     box-shadow: 6px 5px 6px -5px rgba(0, 36, 86, 0.67);
 }
 
+
 .icon-container {
     text-align: center;
     margin-bottom: 1rem;
@@ -31,6 +32,7 @@ margin-top: -90px;
 
 #dashcard-container {
     margin: auto;
+    margin-left: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

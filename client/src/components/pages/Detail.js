@@ -31,42 +31,42 @@ const Detail = props => {
 
   return (
     <>{state.currentGoal ? (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="col">
               <h1>
                 {state.currentGoal.title} by {state.currentGoal.author}
               </h1>
-            </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Content:</h1>
-              <p>{state.currentGoal.body}</p>
-            </article>
-          </Col>
-          {state.favorites.indexOf(state.currentGoal) !== -1 ? (
-            <button className="btn btn-danger" onClick={removeFavorite}>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <article>
+                <h1>Content:</h1>
+                <p>{state.currentGoal.body}</p>
+              </article>
+            </div>
+            {state.favorites.indexOf(state.currentGoal) !== -1 ? (
+              <button className="btn btn-danger" onClick={removeFavorite}>
                 Remove from Favorites!
             </button>
-          ) : (
-            <button className="btn" onClick={addFavorite}>
-                ❤️ Add to Favorites
+            ) : (
+                <button className="btn" onClick={addFavorite}>
+                  ❤️ Add to Favorites
             </button>
-          )}
-        </Row>
-        <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to Goals</Link>
-          </Col>
-        </Row>
-      </Container>
+              )}
+          </div>
+          <div className="row">
+            <div className="col">
+              <Link to="/">← Back to Goals</Link>
+            </div>
+          </div>
+        </div>
+      </div>
     ) : (
-      <div>loading...</div>
-    )}</>
+        <div>loading...</div>
+      )}</>
   );
 };
 
