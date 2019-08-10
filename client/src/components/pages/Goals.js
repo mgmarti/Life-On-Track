@@ -2,19 +2,23 @@ import React from "react";
 import { Col, Row, Container } from "../Grid";
 import CreateGoalForm from "../CreateGoalForm";
 import GoalsList from "../GoalsList";
+import Navbar2 from '../Navbar/Navbar2';
 
 const Goals = () => {
   return (
-    <Container fluid>
-      <Row>
-        <Col size="md-6">
-          <CreateGoalForm />
-        </Col>
-        <Col size="md-6 sm-12">
-          <GoalsList />
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      <Navbar2 />
+      <div className="container">
+        <div className="row ">
+          <div className="col">
+            <CreateGoalForm />
+          </div>
+          <div className="col">
+            <GoalsList />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
