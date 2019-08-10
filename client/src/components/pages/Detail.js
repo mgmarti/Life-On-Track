@@ -34,11 +34,11 @@ const Detail = props => {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
-              <h1>
-                {state.currentGoal.title} by {state.currentGoal.author}
-              </h1>
-            </Jumbotron>
+            {/* <Jumbotron> */}
+            <h1>
+              {state.currentGoal.title} by {state.currentGoal.author}
+            </h1>
+            {/* </Jumbotron> */}
           </Col>
         </Row>
         <Row>
@@ -50,13 +50,13 @@ const Detail = props => {
           </Col>
           {state.favorites.indexOf(state.currentGoal) !== -1 ? (
             <button className="btn btn-danger" onClick={removeFavorite}>
-                Remove from Favorites!
+              Remove from Favorites!
             </button>
           ) : (
-            <button className="btn" onClick={addFavorite}>
+              <button className="btn" onClick={addFavorite}>
                 ❤️ Add to Favorites
             </button>
-          )}
+            )}
         </Row>
         <Row>
           <Col size="md-2">
@@ -65,8 +65,8 @@ const Detail = props => {
         </Row>
       </Container>
     ) : (
-      <div>loading...</div>
-    )}</>
+        <div>loading...</div>
+      )}</>
   );
 };
 

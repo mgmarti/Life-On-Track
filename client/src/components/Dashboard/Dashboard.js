@@ -4,12 +4,12 @@ import Navbar2 from '../Navbar/Navbar2';
 import './Dashboard.css';
 
 class Dashboard extends Component {
-    render(){
+    render() {
         return (
             <div>
                 <div className="dashboard-container">
                     <Navbar2 />
-                   <DashCard /> 
+                    <DashCard />
                 </div>
             </div>
         )
