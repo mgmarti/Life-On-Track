@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout } from '../../../actions/auth';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Navbar.css';
+import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
@@ -19,7 +18,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </li>
       <li>
         <a onClick={logout} href='#!'>
-          <i className='fas fa-sign-out-alt' />{' '}
+          <FontAwesomeIcon icon="sign-out" />
           <span className='hide-sm'>Logout</span>
         </a>
       </li>
@@ -41,7 +40,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar'>
       <h1>
         <Link to='/'>
-          <i className='fas fa-train' />  LIFEonTRACK
+          <FontAwesomeIcon icon="check-square" /> LifeOnTrack
         </Link>
       </h1>
       {!loading && (
