@@ -4,7 +4,10 @@ const bcrypt = require('bcryptjs');
 const auth = require('../../middleware/auth');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-const { check, validationResult } = require('express-validator/check');
+const {
+    check,
+    validationResult
+} = require('express-validator')
 
 const User = require('../../models/User');
 
@@ -39,6 +42,8 @@ router.post(
     const { email, password } = req.body;
 
     try {
+
+        // Checks if user exists
       let user = await User.findOne({ email });
 
       if (!user) {
@@ -47,6 +52,7 @@ router.post(
           .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
+        // Use bcrypt method 'compare' to check if password given matches
       const isMatch = await bcrypt.compare(password, user.password);
 
       if (!isMatch) {

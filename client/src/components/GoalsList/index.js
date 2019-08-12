@@ -39,7 +39,7 @@ function GoalsList() {
   return (
     <div>
       <h1>All Goals</h1>
-      {/* <h3 className="mb-5 mt-5">Click on a goal to view</h3> */}
+      <h3 className="mb-5 mt-5">Click on a goal to view</h3>
       {state.goals.length ? (
         <List>
           {state.goals.map(goal => (
@@ -57,7 +57,7 @@ function GoalsList() {
         <h3>You haven't added any goals yet!</h3>
       )}
       <div className="mt-5">
-        <Link to="favorites">View Achieved Goals </Link>
+        <Link to="favorites">View favorites</Link>
       </div>
     </div>
   );
