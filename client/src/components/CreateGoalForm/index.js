@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_GOAL, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import './GoalForm.css';
 
 function CreateGoalForm() {
   const titleRef = useRef();
@@ -31,22 +30,17 @@ function CreateGoalForm() {
   };
 
   return (
-    <div className="goal-container">
-      <h2 className='large text-primary'>Create a Goal</h2>
-      <form className="form-group" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input className="form-control text-space" required ref={titleRef} placeholder="Title" />
-        </div>
-        <div className="form-group">
-          <textarea className="form-control text-space" required ref={bodyRef} placeholder="Body" />
-        </div>
+    <div>
+      <h1>Create a Goal</h1>
+      <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
+        <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
+        <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
         <input className="form-control mb-5" ref={authorRef} placeholder="Category" />
-        <button className="btn btn-success mb-5" disabled={state.loading} type="submit">
+        <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
           Save Goal
         </button>
       </form>
     </div>
-
   );
 }
 
