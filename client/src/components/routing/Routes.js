@@ -10,8 +10,6 @@ import Goals from '../pages/Goals';
 import FavoritesList from '../pages/FavoritesList';
 import Detail from '../pages/Detail';
 import Profile from '../profile/Profile';
-import Posts from '../posts/Posts';
-import Post from '../post/Post';
 import PrivateRoute from '../routing/PrivateRoute';
 
 const Routes = () => {
@@ -25,8 +23,6 @@ const Routes = () => {
         <PrivateRoute exact path='/dashboard' component={Dashboard} />
         <PrivateRoute exact path='/create-profile' component={CreateProfile} />
         <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-        <PrivateRoute exact path='/posts' component={Posts} />
-        <PrivateRoute exact path='/posts/:id' component={Post} />
         <PrivateRoute exact path='/goals' component={Goals} />
         <PrivateRoute exact path="/goals/:id" component={Detail} />
         <PrivateRoute exact path="/favorites" component={FavoritesList} />

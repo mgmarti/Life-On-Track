@@ -8,6 +8,9 @@ class Cards extends Component {
             <div>
                 <div className="container">
                     <div className="card-container">
+                        <div className="title-container">
+                            <h1 className='x-large'>Welcome to Life on Track</h1>
+                        </div>
                         <div id="card-container">
                             <div className="card">
                                 <div className="card-body">

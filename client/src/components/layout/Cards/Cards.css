@@ -1,14 +1,15 @@
+.title-container {
+    margin-bottom: 100px;
+}
 .card-container {
-    /* margin: auto; */
-    margin-top: -90px;
-
+    margin-top: 360px;
 }
 
 .card {
     background-color: #ffe546;
     color: #002456;
-    width: 20rem;
-    padding: 1rem;
+    width: 18rem;
+    padding: 2rem;
     display: flex;
     margin-left: 1rem;
     margin-right: 1rem;
