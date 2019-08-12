@@ -57,7 +57,7 @@ function GoalsList() {
         <h3>You haven't added any goals yet!</h3>
       )}
       <div className="mt-5">
-        <Link to="favorites">View favorites</Link>
+        <Link to="favorites">View Achieved Goals</Link>
       </div>
     </div>
   );
