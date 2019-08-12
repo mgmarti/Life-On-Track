@@ -27,7 +27,7 @@ const FavoritesList = () => {
 
   return (
     <div className="container mb-5 mt-5">
-      <h1 className="text-center">Here's All of Your Favorite Goals</h1>
+      <h1 className="text-center">Here's All of Your Achieved Goals</h1>
       {state.favorites.length ? (
         <List>
           <h3 className="mb-5 mt-5">Click on a goal to view in detail</h3>
@@ -43,7 +43,7 @@ const FavoritesList = () => {
           ))}
         </List>
       ) : (
-        <h3>You haven't added any favorites yet!</h3>
+        <h3>You haven't added any Achieved Goals yet!</h3>
       )}
       <div className="mt-5">
         <Link to="home">Back to home</Link>

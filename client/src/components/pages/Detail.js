@@ -48,11 +48,11 @@ const Detail = props => {
             </div>
             {state.favorites.indexOf(state.currentGoal) !== -1 ? (
               <button className="btn btn-danger" onClick={removeFavorite}>
-                Remove from Favorites!
+                Remove from Achieved Goals!
             </button>
             ) : (
                 <button className="btn" onClick={addFavorite}>
-                  ❤️ Add to Favorites
+                  ✅ Add to Achieved Goals
             </button>
               )}
           </div>
