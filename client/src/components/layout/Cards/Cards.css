@@ -1,16 +1,15 @@
-.dash-container {
-    margin-top: 150px;
+.title-container {
+    margin-bottom: 100px;
 }
-.dashcard-container {
-margin: auto;
-margin-top: -90px;
+.card-container {
+    margin-top: 360px;
 }
 
-.dashcard {
+.card {
     background-color: #ffe546;
     color: #002456;
-    width: 20rem;
-    padding: 1rem;
+    width: 18rem;
+    padding: 2rem;
     display: flex;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -19,7 +18,6 @@ margin-top: -90px;
     -moz-box-shadow: 6px 5px 6px -5px rgba(0, 36, 86, 0.67);
     box-shadow: 6px 5px 6px -5px rgba(0, 36, 86, 0.67);
 }
-
 
 .icon-container {
     text-align: center;
@@ -30,9 +28,8 @@ margin-top: -90px;
     color: #002456;
 }
 
-#dashcard-container {
+#card-container {
     margin: auto;
-    margin-left: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

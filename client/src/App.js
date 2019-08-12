@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
-import Home from './components/pages/Home';
-import Detail from './components/pages/Detail';
-import NoMatch from './components/pages/NoMatch';
-import FavoritesList from './components/pages/FavoritesList';
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing/Landing';
+import Routes from './components/routing/Routes';
 import { StoreProvider } from './utils/GlobalState';
-import Register from './components/auth/Register';
-import Login from './components/auth/Login';
-import Dashboard from './components/Dashboard/Dashboard';
-import Goals from './components/pages/Goals';
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <StoreProvider>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/dashboard' component={Dashboard} />
-          <Route exact path='/goals' component={Goals} />
-          <Route exact path="/goals/:id" component={Detail} />
-          <Route exact path="/favorites" component={FavoritesList} />
-          {/* <Route component={NoMatch} /> */}
-        </StoreProvider>
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
 
-      </Router>
-    </div>
-  );
+import './App.css';
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
 }
+
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <StoreProvider>
+        <div className="App">
+          <Router>
+            <Fragment>
+              <Navbar />
+              <Switch>
+                <Route exact path='/' component={Landing} />
+                <Route component={Routes} />
+              </Switch>
+            </Fragment>
+          </Router>
+        </div>
+      </StoreProvider>
+    </Provider>
+  );
+};
 
 export default App;
