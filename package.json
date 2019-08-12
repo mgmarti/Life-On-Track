@@ -1,14 +1,14 @@
 {
   "name": "project-3",
   "version": "1.0.0",
-  "description": "Personal organizer/Habit tracker",
+  "description": "> Fill this quoted section with a summary of your project. 3-5 sentences describing the problem and how your application solves it. (Even a game is solving a problem to a degree) - What makes your app stand out from other apps like it (Do some competitor research)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
