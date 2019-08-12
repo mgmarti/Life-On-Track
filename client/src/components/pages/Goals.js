@@ -2,12 +2,12 @@ import React from "react";
 import { Col, Row, Container } from "../Grid";
 import CreateGoalForm from "../CreateGoalForm";
 import GoalsList from "../GoalsList";
-import Navbar2 from '../Navbar/Navbar2';
+// import Navbar2 from '../Navbar/Navbar2';
 
 const Goals = () => {
   return (
     <div>
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <div className="container">
         <div className="row ">
           <div className="col">
