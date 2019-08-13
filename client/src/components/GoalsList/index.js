@@ -39,7 +39,7 @@ function GoalsList() {
   return (
     <div>
       <h1>All Goals</h1>
-      <h3 className="mb-5 mt-5">Click on a goal to view</h3>
+      {/* <h3 className="mb-5 mt-5">Click on a goal to view</h3> */}
       {state.goals.length ? (
         <List>
           {state.goals.map(goal => (
@@ -54,10 +54,12 @@ function GoalsList() {
           ))}
         </List>
       ) : (
-        <h3>You haven't added any goals yet!</h3>
-      )}
+          <h3>You haven't added any goals yet!</h3>
+        )}
       <div className="mt-5">
-        <Link to="favorites">View Achieved Goals</Link>
+        <button className="btn button-bg" disabled={state.loading} type="submit">
+          <Link to="favorites" className="achieved">View Achieved Goals </Link>
+        </button>
       </div>
     </div>
   );
