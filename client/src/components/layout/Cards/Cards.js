@@ -15,7 +15,7 @@ class Cards extends Component {
                             <div className="card">
                                 <div className="card-body">
                                     <div className="icon-container">
-                                        <FontAwesomeIcon icon='list' size="5x" className="icons" />
+                                        <FontAwesomeIcon icon='tasks' size="5x" className="icons" />
                                     </div>
                                     <h3 className="card-title"> Track of daily to - dos </h3>
                                     <p className="card-text">
@@ -27,7 +27,7 @@ class Cards extends Component {
 
                                 <div className="card-body">
                                     <div className="icon-container">
-                                        <FontAwesomeIcon icon='thumbs-up' size="3x" className="icons" />
+                                        <FontAwesomeIcon icon='bullseye' size="5x" className="icons" />
                                     </div> <h3 className="card-title" > Smash Through Your Goals! </h3>
                                     <p className="card-text">
                                         Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading.
@@ -37,7 +37,7 @@ class Cards extends Component {
                             <div className="card">
                                 <div className="card-body">
                                     <div className="icon-container">
-                                        <FontAwesomeIcon icon='check' size="3x" className="icons" />
+                                        <FontAwesomeIcon icon='chart-line' size="5x" className="icons" />
                                     </div> <h3 className="card-title"> Log your progress anywhere. </h3>
                                     <p className="card-text">
                                         Life on Track lets you log progress everywhere.
