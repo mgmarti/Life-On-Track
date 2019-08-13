@@ -4,13 +4,19 @@ import DeleteBtn from "../DeleteBtn/index";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FAVORITE, LOADING, UPDATE_FAVORITES } from "../../utils/actions";
+import API from "../../utils/API";
 
 const FavoritesList = () => {
   const [state, dispatch] = useStoreContext();
-
   const getFavorites = () => {
     dispatch({ type: LOADING });
-    dispatch({ type: UPDATE_FAVORITES });
+      API.getGoals().then(function (response) {
+      console.log(response);
+      // filter goals for favorites
+      const favoriteGoals = response.filter(goal => goal.completed)
+      dispatch({ type: UPDATE_FAVORITES, action: { favorites: favoriteGoals } });
+    })
+    
   };
 
   const removeFromFavorites = id => {
