@@ -9,7 +9,7 @@ class Cards extends Component {
                 <div className="container">
                     <div className="card-container">
                         <div className="title-container">
-                            <h1 className='x-large'>Welcome to Life on Track</h1>
+                            <h1 className='x-large'>Welcome to Life On Track</h1>
                         </div>
                         <div id="card-container">
                             <div className="card">
@@ -17,7 +17,7 @@ class Cards extends Component {
                                     <div className="icon-container">
                                         <FontAwesomeIcon icon='list' size="5x" className="icons" />
                                     </div>
-                                    <h5 className="card-title"> Keep track of daily to - dos </h5>
+                                    <h5 className="card-title"> Track of daily to - dos </h5>
                                     <p className="card-text">
                                         Every to do that has been set to be repeated on a given day is shown on the daily page.
                                     </p>
@@ -28,18 +28,20 @@ class Cards extends Component {
                                 <div className="card-body">
                                     <div className="icon-container">
                                         <FontAwesomeIcon icon='thumbs-up' size="5x" className="icons" />
-                                    </div> <h5 className="card-title" > Lorem ipsum dolor sit. </h5>
+                                    </div> <h5 className="card-title" > Smash Through Your Goals! </h5>
                                     <p className="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.Vel eaque, magnam soluta consectetur. </p>
+                                        Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading
+                                    </p>
                                 </div>
                             </div>
                             <div className="card">
                                 <div className="card-body">
                                     <div className="icon-container">
                                         <FontAwesomeIcon icon='check' size="5x" className="icons" />
-                                    </div> <h5 className="card-title"> Lorem ipsum dolor sit. </h5>
+                                    </div> <h5 className="card-title"> Log your progress anywhere. </h5>
                                     <p className="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.Vel eaque, magnam soluta consectetur repudiandae voluptas. </p>
+                                        Life on Track lets you log progess everywhere.
+                                    </p>
                                 </div>
                             </div>
                         </div>
