@@ -30,7 +30,7 @@ class Cards extends Component {
                                         <FontAwesomeIcon icon='thumbs-up' size="3x" className="icons" />
                                     </div> <h3 className="card-title" > Smash Through Your Goals! </h3>
                                     <p className="card-text">
-                                        Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading
+                                        Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading.
                                     </p>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@ class Cards extends Component {
                                         <FontAwesomeIcon icon='check' size="3x" className="icons" />
                                     </div> <h3 className="card-title"> Log your progress anywhere. </h3>
                                     <p className="card-text">
-                                        Life on Track lets you log progess everywhere.
+                                        Life on Track lets you log progress everywhere.
                                     </p>
                                 </div>
                             </div>
