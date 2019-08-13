@@ -16,10 +16,5 @@ export default {
   // Saves a goal to the database
   saveGoal: function(goalData) {
     return axios.post("/api/goals", goalData);
-  },
-  // Update a goal to the database
-  updateGoal: function(id, goalData) {
-    return axios.put("/api/goals" + id, goalData);
   }
-
 };

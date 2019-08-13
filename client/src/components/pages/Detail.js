@@ -15,25 +15,17 @@ const Detail = props => {
   }, []);
 
   const addFavorite = () => {
-    //to do update API
-    API.updateGoal(props.match.params.id, {...state.currentGoal, completed: true})
-    .then((res) => {
-      dispatch({
-        type: ADD_FAVORITE,
-        goal: state.currentGoal
-      });
-    })
+    dispatch({
+      type: ADD_FAVORITE,
+      goal: state.currentGoal
+    });
   };
-  
+
   const removeFavorite = () => {
-    //to do update API
-    API.updateGoal(props.match.params.id, {...state.currentGoal, completed: false})
-    .then((res) => {
-      dispatch({
-        type: REMOVE_FAVORITE,
-        _id: state.currentGoal._id
-      });
-    })
+    dispatch({
+      type: REMOVE_FAVORITE,
+      _id: state.currentGoal._id
+    });
   };
 
   return (
