@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid/index";
+// import Jumbotron from "../Jumbotron/Jumbotron";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import { SET_CURRENT_GOAL, ADD_FAVORITE, REMOVE_FAVORITE } from "../../utils/actions";
@@ -48,17 +49,17 @@ const Detail = props => {
             </div>
             {state.favorites.indexOf(state.currentGoal) !== -1 ? (
               <button className="btn btn-danger" onClick={removeFavorite}>
-                Remove from Achieved Goals!
+                Remove from Favorites!
             </button>
             ) : (
                 <button className="btn" onClick={addFavorite}>
-                  ✅ Add to Achieved Goals
+                  ❤️ Add to Favorites
             </button>
               )}
           </div>
           <div className="row">
             <div className="col">
-              <Link to="/">← Back to Goals</Link>
+              <Link to="/goals">← Back to Goals</Link>
             </div>
           </div>
         </div>
