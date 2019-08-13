@@ -4,6 +4,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -33,10 +35,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     return (
         <Fragment>
-            <h1 className='large text-primary'>Sign Up</h1>
-            <p className='lead'>
-                <i className='fas fa-user' /> Create Your Account
-      </p>
+            <h2 className='lead'>
+                <FontAwesomeIcon icon='user-plus' size="1x" className="icons" /> Create Your Account
+      </h2>
             <form className='form' onSubmit={e => onSubmit(e)}>
                 <div className='form-group'>
                     <input
@@ -55,10 +56,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                         value={email}
                         onChange={e => onChange(e)}
                     />
-                    <small className='form-text'>
-                        This site uses Gravatar so if you want a profile image, use a
-                        Gravatar email
-          </small>
                 </div>
                 <div className='form-group'>
                     <input
@@ -78,7 +75,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                         onChange={e => onChange(e)}
                     />
                 </div>
-                <input type='submit' className='btn btn-primary' value='Register' />
+                <input type='submit' className='btn button-bg' value='Register' />
             </form>
             <p className='my-1'>
                 Already have an account? <Link to='/login'>Sign In</Link>
