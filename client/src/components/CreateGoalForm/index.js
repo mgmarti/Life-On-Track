@@ -32,7 +32,7 @@ function CreateGoalForm() {
 
   return (
     <div className="goal-container">
-      <h2 className='large text-primary'>Create a Goal</h2>
+      <h1 className="text-center">Create A Goal</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input className="form-control text-title" required ref={titleRef} placeholder="Title" />
