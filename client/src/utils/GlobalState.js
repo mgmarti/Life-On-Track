@@ -54,7 +54,7 @@ const reducer = (state, action) => {
   case UPDATE_FAVORITES:
     return {
       ...state,
-      favorites: [...action.favorites],
+      favorites: [...state.favorites],
       loading: false
     };
 
