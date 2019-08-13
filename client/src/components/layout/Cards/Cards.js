@@ -17,7 +17,7 @@ class Cards extends Component {
                                     <div className="icon-container">
                                         <FontAwesomeIcon icon='list' size="5x" className="icons" />
                                     </div>
-                                    <h5 className="card-title"> Track of daily to - dos </h5>
+                                    <h3 className="card-title"> Track of daily to - dos </h3>
                                     <p className="card-text">
                                         Every to do that has been set to be repeated on a given day is shown on the daily page.
                                     </p>
@@ -27,8 +27,8 @@ class Cards extends Component {
 
                                 <div className="card-body">
                                     <div className="icon-container">
-                                        <FontAwesomeIcon icon='thumbs-up' size="5x" className="icons" />
-                                    </div> <h5 className="card-title" > Smash Through Your Goals! </h5>
+                                        <FontAwesomeIcon icon='thumbs-up' size="3x" className="icons" />
+                                    </div> <h3 className="card-title" > Smash Through Your Goals! </h3>
                                     <p className="card-text">
                                         Easily break bad habits like smoking, drinking or nail biting, or build positive habits like fitness, meditation or reading
                                     </p>
@@ -37,8 +37,8 @@ class Cards extends Component {
                             <div className="card">
                                 <div className="card-body">
                                     <div className="icon-container">
-                                        <FontAwesomeIcon icon='check' size="5x" className="icons" />
-                                    </div> <h5 className="card-title"> Log your progress anywhere. </h5>
+                                        <FontAwesomeIcon icon='check' size="3x" className="icons" />
+                                    </div> <h3 className="card-title"> Log your progress anywhere. </h3>
                                     <p className="card-text">
                                         Life on Track lets you log progess everywhere.
                                     </p>
