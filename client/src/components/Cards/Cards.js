@@ -1,76 +1,54 @@
-import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { login } from '../../actions/auth';
+import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Cards.css';
 
-const Login = ({ login, isAuthenticated }) => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  });
+class Cards extends Component {
+    render() {
+        return (
+            <div>
+                <div className="container">
+                    <div className="card-container">
+                        <div className="title-container">
+                            <h1 className='x-large'>Welcome to Life on Track</h1>
+                        </div>
+                        <div id="card-container">
+                            <div className="card">
+                                <div className="card-body">
+                                    <div className="icon-container">
+                                        <FontAwesomeIcon icon='list' size="5x" className="icons" />
+                                    </div>
+                                    <h3 className="card-title">Track of daily to-dos</h3>
+                                    <p className="card-text">
+                                        Every to do that has been set to be repeated on a given day is shown on the daily page.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="card">
 
-  const { email, password } = formData;
+                                <div className="card-body">
+                                    <div className="icon-container">
+                                        <FontAwesomeIcon icon='thumbs-up' size="5x" className="icons" />
+                                    </div> <h3 className="card-title" > Build/break habits. </h3>
+                                    <p className="card-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.Vel eaque, magnam soluta consectetur. </p>
+                                </div>
+                            </div>
+                            <div className="card">
+                                <div className="card-body">
+                                    <div className="icon-container">
+                                        <FontAwesomeIcon icon='check' size="5x" className="icons" />
+                                    </div> <h3 className="card-title"> Smash through your goals. </h3>
+                                    <p className="card-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                        </div>
 
-  const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
-  const onSubmit = async e => {
-    e.preventDefault();
-    login(email, password);
-  };
-
-  if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
-  }
-
-  return (
-    <Fragment>
-      
-      <h2 className='lead'>
-      <FontAwesomeIcon icon='sign-in-alt' size="1x" className="icons" /> Sign Into Your Account
-      </h2>
-      <form className='form' onSubmit={e => onSubmit(e)}>
-        <div className='form-group'>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={e => onChange(e)}
-            required
-          />
-        </div>
-        <div className='form-group'>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={e => onChange(e)}
-            minLength='6'
-          />
-        </div>
-        <input type='submit' className='btn button-bg' value='Login' />
-      </form>
-      <p className='my-1'>
-        Don't have an account? <Link to='/register'>Sign Up</Link>
-      </p>
-    </Fragment>
-  );
-};
-
-Login.propTypes = {
-  login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
-};
-
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
-});
-
-export default connect(
-  mapStateToProps,
-  { login }
-)(Login);
+export default Cards;
