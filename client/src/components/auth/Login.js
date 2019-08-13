@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ const Login = ({ login, isAuthenticated }) => {
     <Fragment>
       
       <h2 className='lead'>
-        <i className='fas fa-user' /> Sign Into Your Account
+      <FontAwesomeIcon icon='sign-in-alt' size="1x" className="icons" /> Sign Into Your Account
       </h2>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid/index";
-// import Jumbotron from "../Jumbotron/Jumbotron";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import { SET_CURRENT_GOAL, ADD_FAVORITE, REMOVE_FAVORITE } from "../../utils/actions";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Detail = props => {
   const [state, dispatch] = useStoreContext();
@@ -52,15 +53,15 @@ const Detail = props => {
                 Remove from Favorites!
             </button>
             ) : (
-                <button className="btn" onClick={addFavorite}>
-                  ❤️ Add to Favorites
+                <button className="btn add-achieved" onClick={addFavorite}>
+                   <FontAwesomeIcon icon='check-square' size="1x" className="icons" /> Add to Achieved
             </button>
               )}
           </div>
           <div className="row">
-            <div className="col">
-              <Link to="/goals">← Back to Goals</Link>
-            </div>
+            <button className="btn button-bg" disabled={state.loading} type="submit">
+              <Link to="/goals" className="achieved">← Back to Goals</Link>
+            </button>
           </div>
         </div>
       </div>
