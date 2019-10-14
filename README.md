@@ -1,54 +1,53 @@
-# Project 3 
+# LifeOnTrack
+> An app to keep your life organized and on track. Coding Bootcamp Project 3.
 
-> Fill this quoted section with a summary of your project. 3-5 sentences describing the problem and how your application solves it. (Even a game is solving a problem to a degree) - What makes your app stand out from other apps like it (Do some competitor research)
+## Table of contents
+* [General info](#general-info)
+* [Live Site](#live-site)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Status](#status)
+* [Contact](#contact)
 
-The app is going to do is instead of using multiple apps to manage the most important topics that we have in life like: family, health, finances, church, children, expenses  etc we are going to have everything on a single app, on a single page where you can set up goals and habits to reach those goals and see piecharts/ stats about the progress of reaching those goals.
+## General info
+We created Life On Track as an alternative to using multiple apps to tracking personal goals, habits, tasks and other daily aspects of your life. 
 
-## Developers
+The idea came to us when we were discussing busy lifestyles. At first we wanted a someting to help us stay organized like a calendar or to-do list. Then as we discussed our idea more we also talked about setting goals and creating new routines to build new and break bad habits keepings us from reaching our goals. As we searched for an app to do this, we noticed we would have to download multiple apps instead of having everything in one app and this led to the start of Life On Track.
 
-- Juan Delgado (https://github.com/sebasdelgado24)
-  - Role
-  - Any other summary details about the developer you wish to provide
-- Moises Eastland (https://github.com/MoisesEastalnd)
-  - Role
-  - Any other summary details about the developer you wish to provide
-- Monica Martinez (https://github.com/mgmarti)
-  - Role
-  - Any other summary details about the developer you wish to provide
+## Live Site
+http://lifeontrack.herokuapp.com
 
-## Techstack
+## Technologies
+* React
+* Bootstrap
+* HTML5/CSS3
+* FontAwesome
+* MongoDB Atlas
+* Express
+* Mongoose
+* Axios
+* Heroku
 
-- List the technologies (including which css framework) you will use for the project
-React
-Bootstrap
-HTML
-CSS
-FontAwesome
-Express
-MongoDB
-Mongoose
-Node
-Axios
-Heroku/AWS
+## Features
+List of features ready and TODOs for future development
+* User can register and sign in
+* User can add/delete goals
+* User can add to accomplish list
 
-## MVP
-List the Must Have Features minimum viable product
-- Working authentication
-- Master Checklist of goals/ user dashboard defined by categories
-- Weekly progress control panel
+To-do list:
+* Task/Goals/Habits can be sorted to categories
+* User can create categories
+* Reward system
+* User can set completion dates
+* Add visual progress (graphs)
 
+## Status
+Project is: _no longer continue_ 
 
-## Stretch Goals
-What you will try to accomplish after MVP 
-- A reward system for user when they complete a goal/habit.
-- Email user daily goal reminder
-
-## Project board
-
-- Link to your project board on Github - there should be an overview of the features and some user stories assigned to various team members
-
-## Database Diagram
-
-- Link to your database diagram (Check out this tool https://dbdiagram.io/d)
-  - Its ok to screenshot it or share a link from a tool like above
-  - THE POINT OF THIS IS TO PLAN YOUR DATABASE
+## Contact
+Monica Martinez
+    - Front-End
+    - [@mgmarti](https://github.com/mgmarti)
+Juan Delgado 
+    - Back-End
+    - [sebasdelgado24](https://github.com/sebasdelgado24)
