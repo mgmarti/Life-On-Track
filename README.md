@@ -45,9 +45,9 @@ To-do list:
 Project is: _no longer continue_ 
 
 ## Contact
-Monica Martinez
+- Monica Martinez
     - Front-End
     - [@mgmarti](https://github.com/mgmarti)
-Juan Delgado 
+- Juan Delgado 
     - Back-End
     - [sebasdelgado24](https://github.com/sebasdelgado24)
